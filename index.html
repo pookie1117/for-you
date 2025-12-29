@@ -71,7 +71,7 @@ p {
 
   <input id="pw" placeholder="Type here" />
   <br>
-  <button onclick="unlock()">Open 💗</button>
+<button onclick="unlock()">Open 💗</button>
 </div>
 
 <div class="card hidden" id="content">
@@ -94,16 +94,14 @@ p {
 </div>
 
 <script>
-function unlock() {
-  var val = document.getElementById("pw").value.trim().toLowerCase();
+const input = document.getElementById("pw");
 
-  if (val === "bacchu") {
+input.addEventListener("input", function () {
+  if (this.value.trim().toLowerCase() === "bacchu") {
     document.getElementById("lock").style.display = "none";
     document.getElementById("content").classList.remove("hidden");
-  } else {
-    alert("Try the special word 💗");
   }
-}
+});
 </script>
 
 </body>
