@@ -1,82 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Good Morning 🌸</title>
+<title>Good Morning 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Segoe UI", sans-serif;
+  background: url("bg.jpg") repeat;
+  background-size: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at top, #ffe9f1, #fbe7c6, #f3d9fa);
-  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
-/* soft glowing background */
-.glow {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 182, 193, 0.35);
-  border-radius: 50%;
-  filter: blur(80px);
-  animation: floatGlow 10s ease-in-out infinite alternate;
-}
-
-.glow.one { top: 10%; left: 10%; }
-.glow.two { bottom: 10%; right: 15%; background: rgba(255, 223, 186, 0.4); }
-
-@keyframes floatGlow {
-  from { transform: translateY(0); }
-  to { transform: translateY(-40px); }
-}
-
-.card {
+.overlay {
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 34px 28px;
+  backdrop-filter: blur(8px);
   border-radius: 30px;
+  padding: 35px 28px;
   max-width: 420px;
   text-align: center;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
   animation: fadeIn 1.2s ease;
-  position: relative;
-  z-index: 2;
+}
+
+.name {
+  font-family: "Pacifico", cursive;
+  font-size: 22px;
+  color: #e75480;
+  margin-bottom: 10px;
 }
 
 h1 {
-  color: #ff6f91;
+  font-family: "Pacifico", cursive;
   font-size: 2.2rem;
-  margin: 10px 0;
+  color: #e75480;
+  margin-bottom: 10px;
 }
 
 p {
   font-size: 1.05rem;
-  line-height: 1.7;
   color: #444;
-}
-
-pre {
-  font-family: monospace;
-  font-size: 14px;
-  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
 .heart {
   font-size: 32px;
+  margin-top: 14px;
   animation: pulse 1.4s infinite;
-  margin-top: 10px;
+  color: #e75480;
 }
 
-.tag {
-  font-size: 0.9rem;
-  opacity: 0.7;
+.soft {
+  font-size: 0.95rem;
+  opacity: 0.75;
   margin-top: 14px;
 }
 
@@ -84,8 +68,8 @@ pre {
   position: absolute;
   bottom: -40px;
   font-size: 22px;
-  animation: float 8s linear infinite;
-  opacity: 0.7;
+  animation: float 7s linear infinite;
+  opacity: 0.8;
 }
 
 .float:nth-child(1) { left: 15%; animation-delay: 0s; }
@@ -114,44 +98,34 @@ pre {
 
 <body>
 
-<div class="glow one"></div>
-<div class="glow two"></div>
-
 <div class="float">💗</div>
-<div class="float">✨</div>
-<div class="float">🌸</div>
-<div class="float">💛</div>
+<div class="float">💕</div>
+<div class="float">💞</div>
+<div class="float">💓</div>
 
-<div class="card">
+<div class="overlay">
 
-<pre>
-♡   ∩_∩
- （„• ֊ •„)♡
-┏━∪∪━━━━┓
-♡ Bacchu 。 ♡
-┗━━━━━━━┛
-</pre>
+  <div class="name">♡ Bacchu ♡</div>
 
-<h1>Good Morning 🌤️</h1>
+  <h1>Good Morning</h1>
 
-<p>
-I hope you woke up feeling a little lighter today.<br>
-Whatever felt heavy last night doesn’t have to stay with you.
-</p>
+  <p>
+    I hope you wake up feeling a little lighter today.<br>
+    Whatever felt heavy yesterday, you don’t have to carry it now.
+  </p>
 
-<p>
-Take today slowly… breathe, be gentle with yourself 🤍<br>
-You deserve calm, warmth, and soft moments.
-</p>
+  <p>
+    Take things slowly, breathe softly,<br>
+    and be gentle with yourself 🤍
+  </p>
 
-<p>
-If nothing else, remember this —  
-you matter, more than you know 🌷
-</p>
+  <p>
+    You deserve calm, warmth, and quiet happiness today.
+  </p>
 
-<div class="heart">💛</div>
+  <div class="heart">💗</div>
 
-<p class="tag">Wishing you a peaceful, beautiful day ✨</p>
+  <div class="soft">Always wishing you peace & comfort 🌸</div>
 
 </div>
 
