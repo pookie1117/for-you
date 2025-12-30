@@ -50,6 +50,7 @@ button {
   background: #e75480;
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .hidden {
@@ -65,24 +66,39 @@ p {
 
 <body>
 
+<!-- PASSWORD SCREEN -->
 <div class="card" id="lock">
   <h1>Hello 🌸</h1>
   <p>Enter the special word to continue</p>
 
   <input id="pw" placeholder="Type here" />
   <br>
-<button onclick="unlock()">Open 💗</button>
+  <button onclick="unlock()">Open 💗</button>
 </div>
 
+<!-- MESSAGE SCREEN -->
 <div class="card hidden" id="content">
   <h1 id="greeting">Hello 🌸</h1>
-  
-<p id="dynamicText"></p>
-
+  <p id="dynamicText"></p>
   <div style="font-size:30px;">💗</div>
 </div>
 
 <script>
+function unlock() {
+  const entered = document.getElementById("pw").value.trim().toLowerCase();
+
+  // 🔐 CHANGE PASSWORD HERE
+  const password = "bacchu";
+
+  if (entered === password) {
+    document.getElementById("lock").style.display = "none";
+    document.getElementById("content").classList.remove("hidden");
+  } else {
+    alert("Try the special word 💗");
+  }
+}
+
+// time-based message
 const hour = new Date().getHours();
 let greetingText = "";
 let messageText = "";
