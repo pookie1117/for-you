@@ -61,6 +61,31 @@ p {
   color: #444;
   line-height: 1.6;
 }
+ .heartbeat {
+  font-size: 36px;
+  margin-top: 18px;
+  animation: heartbeat 1.6s infinite;
+  color: #e75480;
+  filter: drop-shadow(0 0 8px rgba(231,84,128,0.6));
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.25);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.25);
+  }
+  70% {
+    transform: scale(1);
+  }
+} 
 </style>
 </head>
 
@@ -80,7 +105,7 @@ p {
 <div class="card hidden" id="content">
   <h1 id="greeting">Hello 🌸</h1>
   <p id="dynamicText"></p>
-  <div style="font-size:30px;">💗</div>
+  <div class="heartbeat">💗</div>
 </div>
 
 <script>
